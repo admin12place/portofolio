@@ -1,3 +1,9 @@
 <?php get_header(); ?>
-<h1>Bientôt le portfolio de Thierry</h1>
+
+<section class="site-description">
+    <h1>PortFolie</h1>
+    <p class="site-slogan">Agence du web associatif</p>
+</section>
+
+<p>Et là, c'est du texte...</p>
 <?php get_footer(); ?>

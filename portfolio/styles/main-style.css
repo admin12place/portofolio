@@ -1,6 +1,96 @@
 @charset "UTF-8";
-
-h1 {
-    color: red !important;
-    font-size: 40px;
+/*CHARTE DES COULEURS*/
+/*FIN DE LA CHARTE DES COULEURS*/
+/*INTÉGRATION DES FONTS*/
+@font-face {
+  font-family: "Goldman";
+  src: url("../assets/fonts/woff2/GoldmanBold.woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: "Goldman";
+  src: url("../assets/fonts/woff2/GoldmanRegular.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../assets/fonts/woff2/MerriweatherSans.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../assets/fonts/woff2/MerriweatherSansItalic.woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/woff2/Orbitron.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("../assets/fonts/woff2/SpaceGrotesk.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*FIN D'INTÉGRATION DES FONTS*/
+html,
+body {
+  font-family: "SpaceGrotesk", sans-serif;
+  margin: 0px auto;
+  max-width: 1480px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Goldman", "Verdana";
+}
+
+.site-description {
+  margin: 0;
+  padding: 0 1.4vw;
+}
+.site-description h1 {
+  width: 97%;
+  margin: 0;
+  padding: 0;
+  font-size: 18vw;
+  line-height: 0.53;
+  transform: translateX(-1vw);
+}
+.site-description .site-slogan {
+  margin: 0;
+  padding: 0 0 0 0.6vw;
+  font-size: 1.8vw;
+  word-spacing: 4.7vw;
+  letter-spacing: 2.3vw;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 80px;
+  border-top: 2px solid;
+  border-color: #aabdaa;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: row;
+}
+footer .footer-content .footer-copyright {
+  display: flex;
+  width: 20%;
+}/*# sourceMappingURL=main-style.css.map */
