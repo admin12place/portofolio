@@ -2,7 +2,7 @@
             <div class="footer-content">
 
                 <div class="footer-copyright">
-                    <p>&copy; 2026 PortFolio. Tous droits réservés.</p>
+                    <p>&copy; 2026 PortFolie. Tous droits réservés.</p>
                 </div>
                 <div class="footer-adress"></div>
 

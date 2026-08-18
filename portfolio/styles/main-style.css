@@ -5,14 +5,14 @@
 @font-face {
   font-family: "Goldman";
   src: url("../assets/fonts/woff2/GoldmanBold.woff2");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Goldman";
   src: url("../assets/fonts/woff2/GoldmanRegular.woff2");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -45,43 +45,75 @@
   font-display: swap;
 }
 /*FIN D'INTÉGRATION DES FONTS*/
-html,
-body {
+html {
   font-family: "SpaceGrotesk", sans-serif;
-  margin: 0px auto;
-  max-width: 1480px;
+  margin: 0 auto !important;
+  width: 98vw;
+}
+
+body {
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Goldman", "Verdana";
 }
 
-.site-description {
-  margin: 0;
-  padding: 0 1.4vw;
+ul {
+  list-style: none;
 }
-.site-description h1 {
-  width: 97%;
-  margin: 0;
-  padding: 0;
-  font-size: 18vw;
-  line-height: 0.53;
-  transform: translateX(-1vw);
+
+li a {
+  display: block;
+  font-size: clamp(14px, 1vw, 20px);
+  letter-spacing: 0.8vw;
+  color: #000000;
+  text-decoration: none;
+  transition: transform 0.4s ease-in-out;
 }
-.site-description .site-slogan {
-  margin: 0;
-  padding: 0 0 0 0.6vw;
-  font-size: 1.8vw;
-  word-spacing: 4.7vw;
-  letter-spacing: 2.3vw;
-  text-align: center;
+li a:hover {
+  color: #2e9e28;
+  transform: scale(1.5);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+header .logo-menu {
+  display: flex;
+  flex-direction: row;
+  min-height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo-menu .logo-link {
+  padding: 5px 1vw 5px 4vw;
+}
+header .logo-menu .logo-link .logo {
+  width: 50px;
+  transition: transform 0.4s ease-in-out;
+}
+header .logo-menu .logo-link .logo:hover {
+  transform: scale(1.5);
+}
+header .logo-menu .main-menu-place {
+  width: 50%;
+}
+header .logo-menu .main-menu-place .primary-navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.site-description .title-text {
+  width: 100%;
 }
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0px;
-  left: 0px;
-  width: 100vw;
+  margin: auto;
   height: 80px;
   border-top: 2px solid;
   border-color: #aabdaa;
