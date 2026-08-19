@@ -1,5 +1,5 @@
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
-	<nav id="site-navigation" class="primary-navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'portfolio' ); ?>">
+	<nav id="site-navigation" class="primary-navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'portfolie' ); ?>">
 		<?php
 		wp_nav_menu(
 			array(
@@ -11,6 +11,6 @@
 			)
 		);
 		?>
-	</nav><!-- #site-navigation -->
+	</nav>
 	<?php
 endif;

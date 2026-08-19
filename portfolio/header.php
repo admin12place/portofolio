@@ -7,12 +7,23 @@
         <?php wp_head(); ?>
     </head>
 <body>
+<div class="cursor-dot"></div>
     <header>
         <section class="logo-menu">
             <?php get_template_part( 'template-parts/site-logo' ); ?>
 
+            
+
             <div class="main-menu-place">
+
+                <button class="burger" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
                 <?php get_template_part( 'template-parts/site-main-menu' ); ?>
+                
             </div>
         </section>
 

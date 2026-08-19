@@ -5,7 +5,7 @@ register_nav_menus([
     'footer'  => 'Menu footer'
 ]);
 /*INJECTION DES FEUILLES DE STYLE*/
-    function portfolio_enqueue_styles() {
+    function portfolie_enqueue_styles() {
 
         wp_enqueue_style(
             'portfolio',
@@ -22,6 +22,19 @@ register_nav_menus([
         );
     }
 
-    add_action('wp_enqueue_scripts', 'portfolio_enqueue_styles');
+    add_action('wp_enqueue_scripts', 'portfolie_enqueue_styles');
 /*FIN D'INJECTION DES FEUILLES DE STYLE*/
+
+/*INJECTION DU SCRIPT JS PRINCIPAL*/
+function portfolie_enqueue_main_scripts() {
+
+    wp_enqueue_script(
+        'script-global',
+        get_stylesheet_directory_uri() . '/js/main-scripts.js',
+        array(),
+        filemtime(get_stylesheet_directory() . '/js/main-scripts.js'), true);
+}
+
+add_action( 'wp_enqueue_scripts', 'portfolie_enqueue_main_scripts' );
+/*FIN D'INJECTION DU SCRIPT JS PRINCIPAL*/
 
