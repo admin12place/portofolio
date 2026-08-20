@@ -290,6 +290,12 @@ footer {
         }
     }
 
+    .site-main {
+        &.decaled {
+            transform: translateY(0);
+        }
+    }
+
     footer {
         .footer-content {
             .footer-adress {

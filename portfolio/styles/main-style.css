@@ -254,6 +254,9 @@ footer .footer-content .footer-menu .footer-navigation ul {
     font-size: 36px;
     font-weight: 900;
   }
+  .site-main.decaled {
+    transform: translateY(0);
+  }
   footer .footer-content .footer-adress .phone-link {
     display: block;
   }
