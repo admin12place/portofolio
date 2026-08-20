@@ -28,6 +28,11 @@
         </section>
 
         <section class="site-description">
+
             <img class="title-text" src="<?php echo get_stylesheet_directory_uri() . '/assets/title-text-color.png'?>" alt="Bandeau de titre"/>
+        
+            <img class="title-mirror" src="<?php echo get_stylesheet_directory_uri() . '/assets/title-text-color-reverse.png'?>" alt="Bandeau de titre"/>
+
         </section>
+
     </header>

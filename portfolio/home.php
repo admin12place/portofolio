@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-<p>Et là, c'est du texte...</p>
+<main class="site-main">Et là, c'est du texte...</main>
 
 <?php get_footer(); ?>
