@@ -28,6 +28,16 @@ if (menuBurger && menuContainer) {
     });
 }
 
+/*FERMETURE DU MENU BURGER*/
+const closeBurger = document.querySelector('.icon-close');
+
+if (menuBurger && closeBurger) {
+    closeBurger.addEventListener('click', () => {
+        menuContainer.classList.remove('active');
+        menuBurger.classList.remove('undisplayed');
+    });
+}
+
 /*EFFET MIRROIR*/
 window.addEventListener('load', () => {
     const titleMirror = document.querySelector('.title-mirror');

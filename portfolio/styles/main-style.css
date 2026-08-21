@@ -110,6 +110,12 @@ header .logo-menu .main-menu-place .primary-navigation ul {
   flex-direction: row;
   justify-content: space-around;
 }
+header .logo-menu .main-menu-place .primary-navigation .icon-close {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
 header .logo-menu .main-menu-place .burger {
   display: flex;
   flex-direction: column;
@@ -253,6 +259,13 @@ footer .footer-content .footer-menu .footer-navigation ul {
   header .logo-menu .main-menu-place .primary-navigation ul li a {
     font-size: 36px;
     font-weight: 900;
+  }
+  header .logo-menu .main-menu-place .primary-navigation .icon-close {
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  header .logo-menu .main-menu-place .primary-navigation .icon-close:hover {
+    transform: scale(1.5);
   }
   .site-main.decaled {
     transform: translateY(0);

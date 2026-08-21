@@ -1,5 +1,6 @@
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 	<nav id="site-navigation" class="primary-navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'portfolie' ); ?>">
+	<img class="icon-close" src="<?php echo get_stylesheet_directory_uri() . '/assets/icon-close-red.svg'?>" title="Fermeture du menu" alt="Croix de fermeture"/>
 		<?php
 		wp_nav_menu(
 			array(
