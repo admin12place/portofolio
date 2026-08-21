@@ -187,6 +187,20 @@ header .logo-menu .main-menu-place .burger span {
   transition: left 0.2s ease-out, top 0.2s ease-out;
 }
 
+.entry-header {
+  display: none;
+}
+
+.entry-content .fluentform {
+  width: 75%;
+  margin: auto;
+}
+
+.contact-map {
+  display: flex;
+  justify-content: center;
+}
+
 footer {
   position: relative;
   bottom: 0px;
