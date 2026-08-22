@@ -1,3 +1,4 @@
+<?php get_template_part( 'template-parts/social-network' ); ?>
         <footer>
             <div class="footer-content">
 

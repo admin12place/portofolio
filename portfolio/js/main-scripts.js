@@ -50,3 +50,21 @@ window.addEventListener('load', () => {
         siteMain.classList.add('decaled');
     }, 500);
 });
+
+/*APPARITION DES ICONES DE RÉSEAUX SOCIAUX*/
+const networkWrapper = document.querySelector('.network-wrapper');
+
+if (networkWrapper) {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                networkWrapper.classList.add('display_networks');
+                observer.unobserve(networkWrapper);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    observer.observe(networkWrapper);
+}
