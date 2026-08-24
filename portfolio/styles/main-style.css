@@ -53,6 +53,7 @@ html {
 
 body {
   margin: 0;
+  margin-top: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -107,6 +108,15 @@ header .logo-menu .main-menu-place {
   width: 50%;
 }
 header .logo-menu .main-menu-place .primary-navigation {
+  position: fixed;
+  z-index: 999;
+  width: 48%;
+  top: 6vh;
+  padding: 1vh 0;
+  border: 0px solid;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
   opacity: 1;
   visibility: visible;
 }
@@ -152,12 +162,72 @@ header .logo-menu .main-menu-place .burger span {
 
 .site-main {
   width: 80%;
-  margin: auto;
+  margin: 0 auto 2em auto;
   transform: translateY(0);
   transition: transform 1s ease;
 }
 .site-main.decaled {
-  transform: translateY(-15vh);
+  transform: translateY(-10vh);
+}
+.site-main .manifesto {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5em;
+}
+.site-main .manifesto .manifesto-title {
+  display: flex;
+  align-items: flex-start;
+  min-width: 15vw;
+}
+.site-main .manifesto .manifesto-title h2 {
+  font-family: "SpaceGrotesk";
+  font-size: 1em;
+  width: auto;
+  margin: 1.3vh 0 0 0;
+}
+.site-main .manifesto .manifesto-concept .manifesto-slogan, .site-main .manifesto .manifesto-concept .manifesto-text {
+  width: 70%;
+  margin: 0 0 0 8vw;
+}
+.site-main .manifesto .manifesto-concept .manifesto-slogan p, .site-main .manifesto .manifesto-concept .manifesto-text p {
+  font-size: clamp(36px, 5vw, 70px);
+  font-weight: bold;
+  margin: 0;
+}
+.site-main .manifesto .manifesto-concept .manifesto-text p {
+  font-size: clamp(16px, 1vw, 20px);
+  margin-top: 5vh;
+}
+.site-main .realized-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5vw 3vw;
+  width: 100%;
+}
+.site-main .realized-projects .projects-screens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.site-main .realized-projects .projects-screens .screen-image {
+  width: 100%;
+  border: 1px solid rgba(186, 206, 186, 0.8549019608);
+}
+.site-main .realized-projects .projects-screens .screen-project {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: start;
+}
+.site-main .realized-projects .projects-screens .screen-project .title-project {
+  margin: 0.5vw;
+}
+.site-main .realized-projects .projects-screens .screen-project .client-project {
+  margin: 0.3vw;
+}
+.site-main .realized-projects .projects-screens .screen-project .desc-project {
+  margin: 0.3vw;
 }
 
 .site-description .title-text {
@@ -222,7 +292,7 @@ button.ff-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 4vh 0;
+  margin: 0 0 4vh 0;
   gap: 5vw;
 }
 .network-wrapper .social-link {
@@ -337,6 +407,13 @@ footer .footer-content .footer-menu .footer-navigation ul {
   }
   .site-main.decaled {
     transform: translateY(0);
+  }
+  .site-main .manifesto .manifesto-concept .manifesto-slogan, .site-main .manifesto .manifesto-concept .manifesto-text {
+    width: 90%;
+  }
+  .site-main .realized-projects {
+    display: flex;
+    flex-direction: column;
   }
   footer .footer-content .footer-adress .phone-link {
     display: block;
