@@ -78,7 +78,7 @@ ul {
     list-style: none;
 }
 
-li a, .link-like {
+li a, .link-like, .link-text {
     display: block;
     font-size: clamp(13px, 1vw, 18px);
     letter-spacing: 0.8vw;
@@ -89,6 +89,12 @@ li a, .link-like {
         color: $link_hover;
         transform: scale(1.2);
     }
+}
+
+.link-text {
+    display: inline;
+    letter-spacing: normal;
+    font-size:  clamp(16px, 1vw, 20px);
 }
 
 hr {
@@ -184,6 +190,12 @@ header {
     &.decaled {
         transform: translateY(-10vh);
     }
+    .manifesto-postscriptum {
+        p {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: bold; 
+        }
+    }
     .manifesto {
         display: flex;
         flex-direction: row;
@@ -229,6 +241,7 @@ header {
             .screen-image {
                 display: block;
                 width: 100%;
+                aspect-ratio: 500 / 298;
                 border: 1px solid $border;
                 border-radius: 1vw;
             }

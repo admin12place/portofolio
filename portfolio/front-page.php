@@ -38,13 +38,15 @@
                 $link = $real['link'];
                 $customer = $real['customer'];
                 $description = $real['desc'];
-                $img_url = $real['img'];
+                $img_url = !empty($real['img']) ? $real['img'] : get_stylesheet_directory_uri() . '/assets/no-image-screen.png';
+                $img_alt   = $real['alt'] ?? '';
+                $img_title = $real['title'] ?? '';
         ?>
 
             <div class="projects-screens">
 
-                <a href="#">
-                    <img class="screen-image" src="<?php echo $img_url; ?>" alt="" title="" />
+            <a href="<?php echo $link; ?>" target="_blank">
+            <img class="screen-image" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>" title="<?php echo $img_title; ?>" />
                 </a>
 
                 <article class="screen-project">

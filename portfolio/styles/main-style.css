@@ -64,7 +64,7 @@ ul {
   list-style: none;
 }
 
-li a, .link-like {
+li a, .link-like, .link-text {
   display: block;
   font-size: clamp(13px, 1vw, 18px);
   letter-spacing: 0.8vw;
@@ -72,9 +72,15 @@ li a, .link-like {
   text-decoration: none;
   transition: transform 0.4s ease-in-out;
 }
-li a:hover, .link-like:hover {
+li a:hover, .link-like:hover, .link-text:hover {
   color: #2e9e28;
   transform: scale(1.2);
+}
+
+.link-text {
+  display: inline;
+  letter-spacing: normal;
+  font-size: clamp(16px, 1vw, 20px);
 }
 
 hr {
@@ -169,6 +175,10 @@ header .logo-menu .main-menu-place .burger span {
 .site-main.decaled {
   transform: translateY(-10vh);
 }
+.site-main .manifesto-postscriptum p {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: bold;
+}
 .site-main .manifesto {
   display: flex;
   flex-direction: row;
@@ -214,6 +224,7 @@ header .logo-menu .main-menu-place .burger span {
 .site-main .realized-projects .projects-screens .screen-image {
   display: block;
   width: 100%;
+  aspect-ratio: 500/298;
   border: 1px solid rgba(186, 206, 186, 0.8549019608);
   border-radius: 1vw;
 }
