@@ -38,3 +38,44 @@ function portfolie_enqueue_main_scripts() {
 add_action( 'wp_enqueue_scripts', 'portfolie_enqueue_main_scripts' );
 /*FIN D'INJECTION DU SCRIPT JS PRINCIPAL*/
 
+
+/*RÉCUPERATION DES PROJETS EN FONCTION DE LEUR CATÉGORIE*/
+function get_projects($cat) {
+    $project = [];
+
+    $query = new WP_Query([
+        'post_type'      => 'projet',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+
+        'tax_query' => [
+            ['taxonomy' => 'category', 'field'  => 'slug', 'terms'  => $cat,],
+        ],
+    ]);
+
+    if ($query->have_posts()) {
+
+        while ($query->have_posts()) {
+            $query->the_post();
+
+            $image_id = get_post_meta (get_the_ID(), 'project_img', true);
+
+            $project[] = [
+                'title'    => get_post_meta(get_the_ID(), 'project_title', true),
+                'customer' => get_post_meta(get_the_ID(), 'project_customer', true),
+                'link'     => get_post_meta(get_the_ID(), 'project_link', true),
+                'desc'     => get_post_meta(get_the_ID(), 'project_desc', true),
+                'img'      => wp_get_attachment_url($image_id),
+            ];
+        }
+
+        wp_reset_postdata();
+    }
+
+    return $project;
+}
+        
+
+        
+        
+

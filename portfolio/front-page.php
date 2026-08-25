@@ -31,46 +31,33 @@
     </article>
 
     <section class="realized-projects">
+        <?php
+            $realized = get_projects('realisation');
+            foreach ($realized as $real) {
+                $title = $real['title'];
+                $link = $real['link'];
+                $customer = $real['customer'];
+                $description = $real['desc'];
+                $img_url = $real['img'];
+        ?>
 
-        <div class="projects-screens">
-            <img class="screen-image" src="http://www.thierrydel-pf.local/wp-content/uploads/2026/08/The-Artbox_screen.png" alt="" title="" />
-            <article class="screen-project">
-                <h3 class="title-project">THE ARTBOX</h3>
-                <p class="client-project">The ArtBox Gallery</p>
-                <p class="desc-project">Galerie d'art moderne</p>
-            </article>
-        </div>
+            <div class="projects-screens">
 
-        <div class="projects-screens">
-            <img class="screen-image" src="http://www.thierrydel-pf.local/wp-content/uploads/2026/08/Koukaki_screen.png" alt="" title="" />
-            <article class="screen-project">
-                <h3 class="title-project">KOUKAKI</h3>
-                <p class="client-project">Koukaki Studio</p>
-                <p class="desc-project">Fleurs d'oranger & chats errants</p>
-            </article>
-        </div>
+                <a href="#">
+                    <img class="screen-image" src="<?php echo $img_url; ?>" alt="" title="" />
+                </a>
 
-        <div class="projects-screens">
-            <img class="screen-image" src="http://www.thierrydel-pf.local/wp-content/uploads/2026/08/N.Mota_screen.png" alt="" title="" />
-            <article class="screen-project">
-                <h3 class="title-project">NATHALIE MOTA</h3>
-                <p class="client-project">N.Mota photografy</p>
-                <p class="desc-project">Photographe professionnelle</p>
-            </article>
-        </div>
-
-        <div class="projects-screens">
-            <img class="screen-image" src="http://www.thierrydel-pf.local/wp-content/uploads/2026/08/Print-it_screen.png" alt="" title="" />
-            <article class="screen-project">
-                <h3 class="title-project">PRINT-IT</h3>
-                <p class="client-project">Print-It</p>
-                <p class="desc-project">Imprimerie en ligne</p>
-            </article>
-        </div>
-
+                <article class="screen-project">
+                    <h3 class="title-project"><?php echo $title; ?></h3>
+                    <p class="client-project"><?php echo $customer; ?></p>
+                    <p class="desc-project"><?php echo $description; ?></p>
+                </article>
+                
+            </div>
+        <?php
+        }
+        ?>
         
-
-
     </section>
 
 </main>
