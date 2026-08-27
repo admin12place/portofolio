@@ -1,34 +1,24 @@
 <?php get_header(); ?>
 
+<section class="modale-team">
+    <div class="modale-team-image">
+        <img class="" src="<?php echo the_field('modal_team_img')?>"/>
+    </div>
+    <div class="modale-team-text">
+        <p><?php echo nl2br(esc_html(get_field('modal_team_text'))); ?></p>
+    </div>
+</section>
+
 <main class="site-main">
 
-    <article class="manifesto">
-        <div class="manifesto-title"><h2><?php the_field('home_title'); ?></h2></div>
-        <div class="manifesto-concept">
-            <div class="manifesto-slogan">
-                <p><?php the_field('home_slogan'); ?></p>
-            </div>
-            <div class="manifesto-text">
-                <p><?php the_field('home_text'); ?></p>
-            </div>
-        </div>
+    <?php
 
-    </article>
+        $articles_manifestos = ['home', 'team', 'projects'];//Les différents paragraphes de home
+        foreach ($articles_manifestos as $article_manifesto) {
+            display_article_manifesto($article_manifesto);
+        }
 
-    <article class="manifesto">
-        <div class="manifesto-title"><h2><?php the_field('projects_title'); ?></h2></div>
-        <div class="manifesto-concept">
-            <div class="manifesto-slogan">
-                <p><?php the_field('projects_slogan'); ?></p>
-            </div>
-            <div class="manifesto-text">
-                <p><?php the_field('projects_text'); ?></p>
-            </div>
-        </div>
-
-        <div class="page-nav"></div>
-
-    </article>
+    ?>
 
     <section class="realized-projects">
         <?php
@@ -39,8 +29,8 @@
                 $customer = $real['customer'];
                 $description = $real['desc'];
                 $img_url = !empty($real['img']) ? $real['img'] : get_stylesheet_directory_uri() . '/assets/no-image-screen.png';
-                $img_alt   = $real['alt'] ?? '';
-                $img_title = $real['title'] ?? '';
+                $img_alt   = $real['imgalt'] ?? '';
+                $img_title = $real['imgtitle'] ?? '';
         ?>
 
             <div class="projects-screens">

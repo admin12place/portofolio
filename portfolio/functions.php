@@ -66,6 +66,8 @@ function get_projects($cat) {
                 'link'     => get_post_meta(get_the_ID(), 'project_link', true),
                 'desc'     => get_post_meta(get_the_ID(), 'project_desc', true),
                 'img'      => wp_get_attachment_url($image_id),
+                'imgalt'   => get_post_meta($image_id, '_wp_attachment_image_alt', true),
+                'imgtitle' => get_the_title($image_id),
             ];
         }
 
@@ -73,6 +75,27 @@ function get_projects($cat) {
     }
 
     return $project;
+}
+
+/*FONCTION D'AFFICHAGE DES ARTICLES 'MANIFESTO'*/
+function display_article_manifesto($prefix) {
+    ?>
+    <article class="manifesto">
+        <div class="manifesto-title">
+            <h2><?php the_field($prefix . '_title'); ?></h2>
+        </div>
+
+        <div class="manifesto-concept">
+            <div class="manifesto-slogan">
+                <p><?php the_field($prefix . '_slogan'); ?></p>
+            </div>
+
+            <div class="manifesto-text">
+                <p><?php the_field($prefix . '_text'); ?></p>
+            </div>
+        </div>
+    </article>
+    <?php
 }
         
 

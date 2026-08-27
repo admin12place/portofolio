@@ -68,3 +68,23 @@ if (networkWrapper) {
 
     observer.observe(networkWrapper);
 }
+/*FIN D'APPARITION DES ICONES DE RÉSEAUX SOCIAUX*/
+
+/*GESTION DE LA MODALE-TEAM*/
+const modaleTeam = document.querySelector('.modale-team');
+const modaleTeamLink = document.querySelector('.modal-team-link');
+
+if (modaleTeam && modaleTeamLink) {
+    modaleTeamLink.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.body.classList.add('no-scroll');
+        modaleTeam.classList.add('displayed');
+    });
+
+    document.body.addEventListener('click', () => {
+        document.body.classList.remove('no-scroll');
+        modaleTeam.classList.remove('displayed');
+    });
+}
+/*FIN DE GESTION DE LA MODALE-TEAM*/
+ 

@@ -55,6 +55,9 @@ body {
   margin: 0;
   margin-top: 20px;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Goldman", "Verdana";
@@ -81,6 +84,10 @@ li a:hover, .link-like:hover, .link-text:hover {
   display: inline;
   letter-spacing: normal;
   font-size: clamp(16px, 1vw, 20px);
+}
+
+.modal-team-link {
+  cursor: pointer;
 }
 
 hr {
@@ -278,6 +285,58 @@ header .logo-menu .main-menu-place .burger span {
   transform: translateY(-100%) rotateX(180deg);
 }
 
+.modale-team {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  aspect-ratio: 12/8;
+  max-height: 80%;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../assets/bg-multicolor-flou.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(186, 206, 186, 0.8549019608);
+  border-radius: 5vw;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, visibility 0s linear 1s;
+}
+.modale-team.displayed {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-in-out, visibility 0s linear 0s;
+}
+.modale-team .modale-team-image {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+.modale-team .modale-team-image img {
+  width: 80%;
+  height: auto;
+  border-radius: 5vw;
+}
+.modale-team .modale-team-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 60%;
+}
+.modale-team .modale-team-text p {
+  font-size: clamp(12px, 1.2vw, 20px);
+  margin: 0;
+}
+
 .cursor-dot {
   position: fixed;
   width: 12px;
@@ -436,6 +495,19 @@ footer .footer-content .footer-menu .footer-navigation ul {
   }
   header .logo-menu .main-menu-place .primary-navigation .icon-close:hover {
     transform: scale(1.5);
+  }
+  .modale-team {
+    flex-direction: column;
+    height: 80vh;
+    justify-items: center;
+  }
+  .modale-team .modale-team-image {
+    width: 50%;
+    margin: 4vh 0;
+  }
+  .modale-team .modale-team-text {
+    width: 90%;
+    justify-content: flex-start;
   }
   .site-main.decaled {
     transform: translateY(0);
