@@ -76,7 +76,7 @@ li a, .link-like, .link-text {
   transition: transform 0.4s ease-in-out;
 }
 li a:hover, .link-like:hover, .link-text:hover {
-  color: #2e9e28;
+  color: #2a6627;
   transform: scale(1.2);
 }
 
@@ -93,6 +93,14 @@ li a:hover, .link-like:hover, .link-text:hover {
 hr {
   margin: 4vh auto;
   width: 20%;
+}
+
+.screen-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 500/298;
+  border: 1px solid rgba(186, 206, 186, 0.8549019608);
+  border-radius: 1vw;
 }
 
 header {
@@ -215,6 +223,15 @@ header .logo-menu .main-menu-place .burger span {
   font-size: clamp(16px, 1vw, 20px);
   margin-top: 5vh;
 }
+.site-main .manifesto:nth-child(1) .manifesto-slogan {
+  color: #004ae4;
+}
+.site-main .manifesto:nth-child(2) .manifesto-slogan {
+  color: #bd312d;
+}
+.site-main .manifesto:nth-child(3) .manifesto-slogan {
+  color: #2e9e28;
+}
 .site-main .realized-projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -227,13 +244,6 @@ header .logo-menu .main-menu-place .burger span {
   align-items: center;
   width: 100%;
   position: relative;
-}
-.site-main .realized-projects .projects-screens .screen-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 500/298;
-  border: 1px solid rgba(186, 206, 186, 0.8549019608);
-  border-radius: 1vw;
 }
 .site-main .realized-projects .projects-screens .screen-project {
   position: absolute;
@@ -263,6 +273,42 @@ header .logo-menu .main-menu-place .burger span {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.7s ease-in, visibility 0s linear 0s;
+}
+.site-main .main-single {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 4vh 0;
+}
+.site-main .main-single .single-title {
+  text-align: center;
+}
+.site-main .main-single .body-single {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.site-main .main-single .body-single .single-image {
+  width: 48%;
+}
+.site-main .main-single .body-single .single-verbose {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  justify-content: center;
+}
+.site-main .single-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+}
+.site-main .single-navigation .arrow-preview, .site-main .single-navigation .arrow-next {
+  width: 5vw;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+.site-main .single-navigation .arrow-preview:hover, .site-main .single-navigation .arrow-next:hover {
+  transform: scale(1.2);
 }
 
 .site-description .title-text {
@@ -341,7 +387,7 @@ header .logo-menu .main-menu-place .burger span {
   position: fixed;
   width: 12px;
   height: 12px;
-  background-color: #bd312d;
+  background-color: #c72ec7;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -360,7 +406,7 @@ header .logo-menu .main-menu-place .burger span {
 }
 
 button.ff-btn {
-  background-color: #2e9e28;
+  background-color: #2a6627;
   font-family: "SpaceGrotesk";
   font-size: 1.1em;
   color: white;

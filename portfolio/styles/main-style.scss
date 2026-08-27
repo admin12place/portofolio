@@ -4,8 +4,13 @@
     $border: #bacebada;
     $background: #c6e2c6;
     $link: #000000;
-    $link_hover: #2e9e28;
-    $cursor_dot: #bd312d;
+    $link_hover: #2a6627;
+    $cursor_dot: #c72ec7;
+    $blue_portfolie: #004ae4;
+    $green_portfolie: #2e9e28;
+    $red_portoflie: #bd312d;
+    $yellow_portfolie: #fff442;
+
 /*FIN DE LA CHARTE DES COULEURS*/
 
 /*INTÉGRATION DES FONTS*/
@@ -107,6 +112,14 @@ li a, .link-like, .link-text {
 hr {
     margin: 4vh auto;
     width: 20%;
+}
+
+.screen-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 500 / 298;
+    border: 1px solid $border;
+    border-radius: 1vw;
 }
 
 header {
@@ -234,6 +247,21 @@ header {
             }
         }
     }
+    .manifesto:nth-child(1) {
+        .manifesto-slogan {
+            color:$blue_portfolie;
+        }
+    }
+    .manifesto:nth-child(2) {
+        .manifesto-slogan {
+            color:$red_portoflie;
+        }
+    }
+    .manifesto:nth-child(3) {
+        .manifesto-slogan {
+            color:$green_portfolie;
+        }
+    }
     .realized-projects {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -245,13 +273,6 @@ header {
             align-items: center;
             width: 100%;
             position: relative;
-            .screen-image {
-                display: block;
-                width: 100%;
-                aspect-ratio: 500 / 298;
-                border: 1px solid $border;
-                border-radius: 1vw;
-            }
             .screen-project {
                 position: absolute;
                 left: 0.5vw;
@@ -282,6 +303,42 @@ header {
                     visibility: visible;
                     transition: opacity 0.7s ease-in, visibility 0s linear 0s;
                 }
+            }
+        }
+    }
+    .main-single {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 4vh 0;
+        .single-title {
+            text-align: center;
+        }
+        .body-single {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .single-image {
+                width: 48%;
+            }
+            .single-verbose {
+                display: flex;
+                flex-direction: column;
+                width: 48%;
+                justify-content: center;
+            }
+        }
+    }
+    .single-navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+        .arrow-preview, .arrow-next {
+            width: 5vw;
+            transform: scale(1);
+            transition: transform 0.5s ease;
+            &:hover {
+                transform: scale(1.2);
             }
         }
     }

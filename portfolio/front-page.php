@@ -27,22 +27,24 @@
                 $title = $real['title'];
                 $link = $real['link'];
                 $customer = $real['customer'];
-                $description = $real['desc'];
-                $img_url = !empty($real['img']) ? $real['img'] : get_stylesheet_directory_uri() . '/assets/no-image-screen.png';
+                $activity = $real['activity'];
+                $description = $real['description'];
+                $img_url = !empty($real['imgid']) ? $real['imgid'] : get_stylesheet_directory_uri() . '/assets/no-image-screen.png';
                 $img_alt   = $real['imgalt'] ?? '';
                 $img_title = $real['imgtitle'] ?? '';
+                $project_url = $real['url'] ?? '';
         ?>
 
             <div class="projects-screens">
 
-            <a href="<?php echo $link; ?>" target="_blank">
+            <a href="<?php echo $project_url; ?>">
             <img class="screen-image" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>" title="<?php echo $img_title; ?>" />
                 </a>
 
                 <article class="screen-project">
                     <h3 class="title-project"><?php echo $title; ?></h3>
                     <p class="client-project"><?php echo $customer; ?></p>
-                    <p class="desc-project"><?php echo $description; ?></p>
+                    <p class="desc-project"><?php echo $activity; ?></p>
                 </article>
                 
             </div>

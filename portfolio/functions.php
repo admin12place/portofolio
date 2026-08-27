@@ -61,13 +61,15 @@ function get_projects($cat) {
             $image_id = get_post_meta (get_the_ID(), 'project_img', true);
 
             $project[] = [
-                'title'    => get_post_meta(get_the_ID(), 'project_title', true),
-                'customer' => get_post_meta(get_the_ID(), 'project_customer', true),
-                'link'     => get_post_meta(get_the_ID(), 'project_link', true),
-                'desc'     => get_post_meta(get_the_ID(), 'project_desc', true),
-                'img'      => wp_get_attachment_url($image_id),
-                'imgalt'   => get_post_meta($image_id, '_wp_attachment_image_alt', true),
-                'imgtitle' => get_the_title($image_id),
+                'title'      => get_post_meta(get_the_ID(), 'project_title', true),
+                'link'       => get_post_meta(get_the_ID(), 'project_link', true),
+                'customer'   => get_post_meta(get_the_ID(), 'project_customer', true),
+                'activity'   => get_post_meta(get_the_ID(), 'project_activity', true),
+                'description'=> get_post_meta(get_the_ID(), 'project_desc', true),
+                'imgid'      => wp_get_attachment_url($image_id),
+                'imgalt'     => get_post_meta($image_id, '_wp_attachment_image_alt', true),
+                'imgtitle'   => get_the_title($image_id),
+                'url'        => get_permalink(),
             ];
         }
 
