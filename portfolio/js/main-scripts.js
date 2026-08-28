@@ -87,4 +87,80 @@ if (modaleTeam && modaleTeamLink) {
     });
 }
 /*FIN DE GESTION DE LA MODALE-TEAM*/
+
+/*GESTION DE LA SINGLE-PROJET*/
+document.addEventListener('DOMContentLoaded', () => {
+
+    const article = document.querySelector('.main-single');
+    const previous = document.querySelector('.arrow-preview');
+    const next = document.querySelector('.arrow-next');
+
+    if (!article || !previous || !next) {
+        return;
+    }
+    let currentId = currentProjectId;
+
+
+    function getIndex() {
+        return projects.findIndex(
+            project => Number(project.id) === Number(currentId)
+        );
+    }
+
+
+    function displayProject(project) {
+
+        article.querySelector('h1').textContent = project.title;
+        const image = article.querySelector('.screen-image');
+
+        image.src = project.imgurl;
+        image.alt = project.imgalt;
+        image.title = project.imgtitle;
+
+        const paragraphs =
+            article.querySelectorAll('.single-verbose p');
+
+        paragraphs[0].textContent =
+            `TITRE DU PROJET : ${project.title}`;
+
+        paragraphs[1].textContent =
+            `NOM DU CLIENT : ${project.customer}`;
+
+        paragraphs[2].textContent =
+            `SECTEUR D'ACTIVITÉ : ${project.activity}`;
+
+        paragraphs[3].innerHTML =
+            `LIEN : <a href="${project.link}"> ${project.link} </a>`;
+
+        paragraphs[4].innerHTML =
+            `DESCRIPTION DU PROJET : ${
+                project.description.replace(/\n/g, '<br>')
+            }`;
+
+        currentId = project.id;
+        article.dataset.projectId = project.id;
+
+
+        history.pushState(
+            {},
+            '',
+            project.url
+        );
+
+    }
+    
+
+    previous.addEventListener('click', () => {
+        const index = getIndex();
+        const previousIndex = (index - 1 + projects.length) % projects.length;
+        displayProject(projects[previousIndex]);
+    });
+    
+    
+    next.addEventListener('click', () => {
+        const index = getIndex();
+        const nextIndex = (index + 1) % projects.length;
+        displayProject(projects[nextIndex]);
+    });
+});
  

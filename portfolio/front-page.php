@@ -29,7 +29,7 @@
                 $customer = $real['customer'];
                 $activity = $real['activity'];
                 $description = $real['description'];
-                $img_url = !empty($real['imgid']) ? $real['imgid'] : get_stylesheet_directory_uri() . '/assets/no-image-screen.png';
+                $img_url = !empty($real['imgurl']) ? $real['imgurl'] : get_stylesheet_directory_uri() . '/assets/no-image-screen.png';
                 $img_alt   = $real['imgalt'] ?? '';
                 $img_title = $real['imgtitle'] ?? '';
                 $project_url = $real['url'] ?? '';
