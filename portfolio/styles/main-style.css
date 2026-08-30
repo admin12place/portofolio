@@ -53,7 +53,6 @@ html {
 
 body {
   margin: 0;
-  margin-top: 20px;
 }
 body.no-scroll {
   overflow: hidden;
@@ -101,6 +100,21 @@ hr {
   aspect-ratio: 500/298;
   border: 1px solid rgba(186, 206, 186, 0.8549019608);
   border-radius: 1vw;
+}
+
+#page404error h1.page404title {
+  font-size: clamp(24px, 6vw, 96px);
+  font-weight: 700;
+  font-style: italic;
+  -webkit-text-stroke: 0.17vw rgb(0, 0, 0);
+  color: transparent;
+  white-space: nowrap;
+  text-align: center;
+}
+#page404error .page404text {
+  margin: 0;
+  font-size: clamp(12px, 1.2vw, 36px);
+  text-align: center;
 }
 
 header {
@@ -183,7 +197,7 @@ header .logo-menu .main-menu-place .burger span {
 
 .site-main {
   width: 80%;
-  margin: 0 auto 2em auto;
+  margin: 0 auto;
   transform: translateY(0);
   transition: transform 1s ease;
 }
@@ -197,7 +211,7 @@ header .logo-menu .main-menu-place .burger span {
 .site-main .manifesto {
   display: flex;
   flex-direction: row;
-  margin-bottom: 5em;
+  margin-bottom: 7vh;
 }
 .site-main .manifesto .manifesto-title {
   display: flex;
@@ -221,7 +235,6 @@ header .logo-menu .main-menu-place .burger span {
 }
 .site-main .manifesto .manifesto-concept .manifesto-text p {
   font-size: clamp(16px, 1vw, 20px);
-  margin-top: 5vh;
 }
 .site-main .manifesto:nth-child(1) .manifesto-slogan {
   color: #004ae4;
@@ -310,12 +323,13 @@ header .logo-menu .main-menu-place .burger span {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 10vh;
   gap: 5vw;
 }
 .site-main .single-navigation .arrow-preview, .site-main .single-navigation .arrow-next {
   background-color: transparent;
   border: none;
-  width: 5vw;
+  width: clamp(36px, 5vw, 60px);
   transform: scale(1);
   transition: transform 0.5s ease;
 }
@@ -582,6 +596,20 @@ footer .footer-content .footer-menu .footer-navigation ul {
   .site-main .realized-projects {
     display: flex;
     flex-direction: column;
+  }
+  .site-main .main-single .body-single {
+    flex-direction: column;
+  }
+  .site-main .main-single .body-single .single-image {
+    width: 100%;
+  }
+  .site-main .main-single .body-single .single-verbose {
+    width: 100%;
+  }
+  .site-main .single-navigation {
+    gap: 10vw;
+    margin-top: 0;
+    margin-bottom: 5vh;
   }
   footer .footer-content .footer-adress .phone-link {
     display: block;

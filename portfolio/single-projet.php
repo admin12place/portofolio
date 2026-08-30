@@ -2,7 +2,8 @@
 
 <?php
     //Pour la gestion des flèches
-    $projects = get_projects('realisation');
+    $from =  $_GET['from'] ?? 'projet';
+    $projects = get_projects("$from");
     $current_id = get_the_ID();
     $current_index = array_search($current_id, array_column($projects, 'id'));
 
@@ -26,7 +27,7 @@
         </div>
         <div class="body-single">
             <div class="single-image">
-            <img class="screen-image" src="<?php echo $image_url; ?>" alt="<?php echo $imgalt; ?>" title="<?php echo $imgtitle; ?>" />
+                <img class="screen-image" src="<?php echo $image_url; ?>" alt="<?php echo $imgalt; ?>" title="<?php echo $imgtitle; ?>" />
             </div>
             <div class="single-verbose">
                 <p>TITRE DU PROJET : <?php echo $title; ?></p>
@@ -40,11 +41,11 @@
     <div class="single-navigation">
 
         <button class="arrow-preview" type="button" aria-label="Projet précédent">
-            <img class="" src="<?php echo get_stylesheet_directory_uri() . '/assets/icon-arrowleft.png'?>" alt="Projet précédent" title="Projet précédent"/>
+            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/icon-arrowleft.png'?>" alt="Projet précédent" title="Projet précédent"/>
         </button>
 
         <button class="arrow-next" type="button" aria-label="Projet suivant">
-            <img class="" src="<?php echo get_stylesheet_directory_uri() . '/assets/icon-arrowright.png'?>" alt="Projet précédent" title="Projet précédent"/>
+            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/icon-arrowright.png'?>" alt="Projet précédent" title="Projet précédent"/>
         </button>
 
     </div>

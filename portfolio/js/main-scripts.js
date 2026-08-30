@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    function displayProject(project) {
+    function displayProject(project, direction) {
 
         article.querySelector('h1').textContent = project.title;
         const image = article.querySelector('.screen-image');
@@ -141,18 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
         article.dataset.projectId = project.id;
 
 
-        history.pushState(
-            {},
-            '',
-            project.url
-        );
+        history.pushState({}, '', project.url);
 
-    }
+}
     
-
     previous.addEventListener('click', () => {
         const index = getIndex();
         const previousIndex = (index - 1 + projects.length) % projects.length;
+        article.classList.add('hide-article');
         displayProject(projects[previousIndex]);
     });
     
@@ -160,7 +156,23 @@ document.addEventListener('DOMContentLoaded', () => {
     next.addEventListener('click', () => {
         const index = getIndex();
         const nextIndex = (index + 1) % projects.length;
+        article.classList.add('hide-article');
         displayProject(projects[nextIndex]);
     });
 });
- 
+/*FIN DE GESTION DE LA SINGLE-PROJET*/
+
+/*COULEURS DES MANIFESTOS*/
+const colors = ['#0000FF', '#FF0000', '#00AA00'];
+colors.sort(() => Math.random() - 0.5);
+
+const elements = document.querySelectorAll('.manifesto');
+
+elements.forEach((element, index) => {
+
+    const color = colors[index % colors.length];
+
+    element.querySelector('.manifesto-slogan').style.color = color;
+
+});
+/*FIN DE COULEURS DES MANIFESTOS*/

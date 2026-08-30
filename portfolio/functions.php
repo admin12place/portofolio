@@ -70,7 +70,7 @@ function get_projects($cat) {
                 'imgurl'     => wp_get_attachment_url($image_id),
                 'imgalt'     => get_post_meta($image_id, '_wp_attachment_image_alt', true),
                 'imgtitle'   => get_the_title($image_id),
-                'url'        => get_permalink(),
+                'url'        => get_permalink()."?from=".$cat,
             ];
         }
 

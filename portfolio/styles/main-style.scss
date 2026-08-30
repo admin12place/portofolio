@@ -72,7 +72,7 @@ html {
 
 body {
     margin: 0;
-    margin-top: 20px;
+    //margin-top: 20px;
     &.no-scroll {
         overflow: hidden;
     }
@@ -120,6 +120,23 @@ hr {
     aspect-ratio: 500 / 298;
     border: 1px solid $border;
     border-radius: 1vw;
+}
+
+#page404error {
+    h1.page404title {
+        font-size: clamp(24px, 6vw, 96px);
+        font-weight: 700;
+        font-style: italic;
+        -webkit-text-stroke: 0.17vw rgba(0, 0, 0,1);
+        color: transparent;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .page404text {
+        margin: 0;
+        font-size: clamp(12px, 1.2vw, 36px);
+        text-align: center;
+    }
 }
 
 header {
@@ -204,7 +221,7 @@ header {
 
 .site-main {
     width: 80%;
-    margin: 0 auto 2em auto;
+    margin: 0 auto;
     transform: translateY(0);
     transition: transform 1s ease;
     &.decaled {
@@ -219,7 +236,7 @@ header {
     .manifesto {
         display: flex;
         flex-direction: row;
-        margin-bottom: 5em;
+        margin-bottom: 7vh;
         .manifesto-title {
             display: flex;
             align-items:flex-start;
@@ -243,7 +260,6 @@ header {
             }
             .manifesto-text p {
                font-size: clamp(16px, 1vw, 20px);
-               margin-top: 5vh;
             }
         }
     }
@@ -342,11 +358,12 @@ header {
         width: 100%;
         display: flex;
         justify-content: center;
+        margin-top: 10vh;
         gap: 5vw;
         .arrow-preview, .arrow-next {
             background-color: transparent;
             border: none;
-            width: 5vw;
+            width: clamp(36px, 5vw, 60px);
             transform: scale(1);
             transition: transform 0.5s ease;
             img {
@@ -646,6 +663,22 @@ footer {
         .realized-projects {
         display: flex;
         flex-direction: column;
+        }
+        .main-single {
+            .body-single {
+                flex-direction: column;
+                .single-image {
+                    width: 100%;
+                }
+                .single-verbose {
+                    width: 100%;
+                }
+            }
+        }
+        .single-navigation {
+            gap: 10vw;
+            margin-top: 0;
+            margin-bottom: 5vh;
         }
     }
 
