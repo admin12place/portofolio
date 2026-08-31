@@ -33,7 +33,7 @@
                 <p>TITRE DU PROJET : <?php echo $title; ?></p>
                 <p>NOM DU CLIENT : <?php echo $customer; ?></p>
                 <p>SECTEUR D'ACTIVITÉ : <?php echo $activity; ?></p>
-                <p>LIEN : <a href="<?php echo $link; ?>"><?php echo $title; ?></a></p>
+                <p>LIEN : <a href="<?php echo $link; ?>" target="blank"><?php echo $title; ?></a></p>
                 <p>DESCRIPTION DU PROJET : <?php echo nl2br(esc_html($desc)); ?></p>
             </div>
         </div>

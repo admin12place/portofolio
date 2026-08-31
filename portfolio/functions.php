@@ -90,7 +90,7 @@ function display_article_manifesto($prefix) {
 
         <div class="manifesto-concept">
             <div class="manifesto-slogan">
-                <p><?php the_field($prefix . '_slogan'); ?></p>
+                <h3><?php the_field($prefix . '_slogan'); ?></h3>
             </div>
 
             <div class="manifesto-text">

@@ -102,7 +102,6 @@ hr {
 .screen-image {
   display: block;
   width: 100%;
-  aspect-ratio: 500/298;
   border: 1px solid rgba(186, 206, 186, 0.8549019608);
   border-radius: 1vw;
 }
@@ -233,7 +232,7 @@ header .logo-menu .main-menu-place .burger span {
   width: 70%;
   margin: 0 0 0 8vw;
 }
-.site-main .manifesto .manifesto-concept .manifesto-slogan p, .site-main .manifesto .manifesto-concept .manifesto-text p {
+.site-main .manifesto .manifesto-concept .manifesto-slogan h3, .site-main .manifesto .manifesto-concept .manifesto-text h3 {
   font-size: clamp(36px, 5vw, 70px);
   font-weight: bold;
   margin: 0;
@@ -373,6 +372,7 @@ header .logo-menu .main-menu-place .burger span {
   transform: translateY(-100%) rotateX(180deg);
 }
 
+/*LA MODALE DE PRÉSENTATION*/
 .modale-team {
   position: fixed;
   z-index: 1000;
@@ -382,14 +382,11 @@ header .logo-menu .main-menu-place .burger span {
   align-items: center;
   width: 80vw;
   aspect-ratio: 12/8;
-  max-height: 80%;
+  max-height: 75%;
   top: 10vh;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url("../assets/bg-multicolor-flou.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../assets/bg-multicolor-flou.png") center/cover no-repeat;
   border: 2px solid rgba(186, 206, 186, 0.8549019608);
   border-radius: 5vw;
   visibility: hidden;
@@ -403,9 +400,8 @@ header .logo-menu .main-menu-place .burger span {
 }
 .modale-team .modale-team-image {
   display: flex;
-  width: 40%;
+  width: 30%;
   justify-content: center;
-  align-items: center;
 }
 .modale-team .modale-team-image img {
   width: 80%;
@@ -417,7 +413,7 @@ header .logo-menu .main-menu-place .burger span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 60%;
   height: 60%;
 }
 .modale-team .modale-team-text p {
@@ -455,7 +451,11 @@ button.ff-btn {
   letter-spacing: 0.2em;
   padding: 0.8em 1em;
   border-radius: 1vw;
+  transition: background-color 0.5s ease;
   cursor: pointer;
+}
+button.ff-btn:hover {
+  background-color: #2e9e28;
 }
 
 .ff-message-success {

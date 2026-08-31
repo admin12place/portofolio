@@ -76,6 +76,7 @@ const modaleTeamLink = document.querySelector('.modal-team-link');
 
 if (modaleTeam && modaleTeamLink) {
     modaleTeamLink.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         document.body.classList.add('no-scroll');
         modaleTeam.classList.add('displayed');
@@ -130,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `SECTEUR D'ACTIVITÉ : ${project.activity}`;
 
         paragraphs[3].innerHTML =
-            `LIEN : <a href="${project.link}"> ${project.title} </a>`;
+            `LIEN : <a href="${project.link}" target="blank"> ${project.title} </a>`;
 
         paragraphs[4].innerHTML =
             `DESCRIPTION DU PROJET : ${

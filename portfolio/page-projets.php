@@ -22,7 +22,7 @@
             <div class="manifesto-title"><h2><?php the_field('home_title'); ?></h2></div>
             <div class="manifesto-concept">
                 <div class="manifesto-slogan">
-                    <p><?php the_field('home_slogan'); ?></p>
+                    <h3><?php the_field('home_slogan'); ?></h3>
                 </div>
                 <div class="manifesto-text">
                     <p><?php the_field('home_text'); ?></p>
