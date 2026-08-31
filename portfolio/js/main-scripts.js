@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `SECTEUR D'ACTIVITÉ : ${project.activity}`;
 
         paragraphs[3].innerHTML =
-            `LIEN : <a href="${project.link}"> ${project.link} </a>`;
+            `LIEN : <a href="${project.link}"> ${project.title} </a>`;
 
         paragraphs[4].innerHTML =
             `DESCRIPTION DU PROJET : ${
