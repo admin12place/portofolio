@@ -52,7 +52,8 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: auto;
+  max-width: 1480px;
 }
 body.no-scroll {
   overflow: hidden;
@@ -90,6 +91,15 @@ li a:hover, .link-like:hover, .link-text:hover {
   transform: scale(1.2);
 }
 
+.link-cta {
+  background-color: rgba(186, 206, 186, 0.8549019608);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border-radius: 1em;
+}
+
 .modal-team-link {
   cursor: pointer;
 }
@@ -104,6 +114,10 @@ hr {
   width: 100%;
   border: 1px solid rgba(186, 206, 186, 0.8549019608);
   border-radius: 1vw;
+}
+
+.cky-btn-revisit-wrapper {
+  display: none !important;
 }
 
 #page404error h1.page404title {
@@ -123,6 +137,7 @@ hr {
 
 header {
   padding-top: var(--wp-admin--admin-bar--height, 0px);
+  max-width: 1480px;
   display: flex;
   flex-direction: column;
 }
@@ -144,12 +159,13 @@ header .logo-menu .logo-link .logo:hover {
   transform: scale(1.5);
 }
 header .logo-menu .main-menu-place {
-  width: 50%;
+  width: 48%;
 }
 header .logo-menu .main-menu-place .primary-navigation {
   position: fixed;
   z-index: 999;
-  width: 48%;
+  width: 45%;
+  max-width: 740px;
   top: 6vh;
   padding: 1vh 0;
   border: 0px solid;
@@ -162,7 +178,9 @@ header .logo-menu .main-menu-place .primary-navigation {
 header .logo-menu .main-menu-place .primary-navigation ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  padding: 0;
+  max-width: 700px;
+  justify-content: space-between;
 }
 header .logo-menu .main-menu-place .primary-navigation .icon-close {
   display: none;
@@ -327,6 +345,18 @@ header .logo-menu .main-menu-place .burger span {
 .site-main .main-single .body-single .single-verbose p a:hover {
   color: #2a6627;
   transform: scale(1.2);
+}
+.site-main .project-transition .project-image {
+  transition: opacity 0.6s ease;
+}
+.site-main .project-transition .project-info {
+  transition: opacity 0.6s ease;
+}
+.site-main .project-transition.transition .project-image {
+  opacity: 0;
+}
+.site-main .project-transition.transition .project-info {
+  opacity: 0;
 }
 .site-main .single-navigation {
   width: 100%;

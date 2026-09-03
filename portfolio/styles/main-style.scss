@@ -71,8 +71,8 @@ html {
 }
 
 body {
-    margin: 0;
-    //margin-top: 20px;
+    margin: auto;
+    max-width: 1480px;
     &.no-scroll {
         overflow: hidden;
     }
@@ -110,6 +110,14 @@ li a, .link-like, .link-text {
     }
 }
 
+.link-cta {
+    background-color: $border;
+    width: fit-content;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border-radius: 1em;
+}
+
 .modal-team-link {
     cursor: pointer;
 }
@@ -124,6 +132,10 @@ hr {
     width: 100%;
     border: 1px solid $border;
     border-radius: 1vw;
+}
+
+.cky-btn-revisit-wrapper {
+    display: none !important;
 }
 
 #page404error {
@@ -145,7 +157,7 @@ hr {
 
 header {
     padding-top: var(--wp-admin--admin-bar--height, 0px);//Pour éviter que l'adminBar cache le haut du header
-
+    max-width: 1480px;
     display: flex;
     flex-direction: column;
     .logo-menu {
@@ -165,11 +177,12 @@ header {
             }
         }
         .main-menu-place {
-            width: 50%;
+            width: 48%;
             .primary-navigation {
                 position: fixed;
                 z-index: 999;
-                width: 48%;
+                width: 45%;
+                max-width: 740px;
                 top: 6vh;
                 padding: 1vh 0;
                 border: 0px solid;
@@ -181,7 +194,9 @@ header {
                 ul {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-around;
+                    padding: 0;
+                    max-width: 700px;
+                    justify-content: space-between;
                 }
                 .icon-close {
                     display: none;
@@ -360,6 +375,24 @@ header {
                         }
                     }
                 }
+            }
+        }
+    }
+    .project-transition {
+        .project-image {
+            transition:
+                opacity 0.6s ease;
+        }
+        .project-info {
+            transition:
+                opacity 0.6s ease;
+        }
+        &.transition {
+            .project-image {
+                opacity: 0;
+            }
+            .project-info {
+                opacity: 0;
             }
         }
     }

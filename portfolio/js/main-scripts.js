@@ -144,13 +144,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         history.pushState({}, '', project.url);
 
-}
+    }
+
+    const projectTransition = document.querySelector('.project-transition');
     
     previous.addEventListener('click', () => {
         const index = getIndex();
         const previousIndex = (index - 1 + projects.length) % projects.length;
         article.classList.add('hide-article');
-        displayProject(projects[previousIndex]);
+        projectTransition.classList.add('transition');
+        setTimeout(() => {
+            displayProject(projects[previousIndex]);
+            projectTransition.classList.remove('transition');
+            }, 600);
     });
     
     
@@ -158,9 +164,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const index = getIndex();
         const nextIndex = (index + 1) % projects.length;
         article.classList.add('hide-article');
+        projectTransition.classList.add('transition');
+        setTimeout(() => {
         displayProject(projects[nextIndex]);
+        projectTransition.classList.remove('transition');
+        }, 600);
     });
 });
+
+/*Animation de la single project*/
+
+
+
 /*FIN DE GESTION DE LA SINGLE-PROJET*/
 
 /*COULEURS DES MANIFESTOS*/

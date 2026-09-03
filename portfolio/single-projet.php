@@ -25,11 +25,11 @@
         <div class="single-title">
             <h1><?php echo $title; ?></h1>
         </div>
-        <div class="body-single">
+        <div class="body-single project-transition">
             <div class="single-image">
-                <img class="screen-image" src="<?php echo $image_url; ?>" alt="<?php echo $imgalt; ?>" title="<?php echo $imgtitle; ?>" />
+                <img class="screen-image project-image" src="<?php echo $image_url; ?>" alt="<?php echo $imgalt; ?>" title="<?php echo $imgtitle; ?>" />
             </div>
-            <div class="single-verbose">
+            <div class="single-verbose project-info">
                 <p>TITRE DU PROJET : <?php echo $title; ?></p>
                 <p>NOM DU CLIENT : <?php echo $customer; ?></p>
                 <p>SECTEUR D'ACTIVITÉ : <?php echo $activity; ?></p>
@@ -55,6 +55,15 @@
 <script>
     const projects = <?php echo wp_json_encode($projects); ?>;
     const currentProjectId = <?php echo get_the_ID(); ?>;
+</script>
+
+<script>
+window.addEventListener('load', () => {
+    window.scrollTo({
+        top: 180,
+        behavior: 'smooth'
+    });
+});
 </script>
 
 <?php get_footer(); ?>
