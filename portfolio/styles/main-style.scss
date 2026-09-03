@@ -381,18 +381,18 @@ header {
     .project-transition {
         .project-image {
             transition:
-                opacity 0.6s ease;
+                opacity 0.6s ease-in-out;
         }
         .project-info {
             transition:
-                opacity 0.6s ease;
+                opacity 0.6s ease-in-out;
         }
         &.transition {
             .project-image {
-                opacity: 0;
+                opacity: 0.3;
             }
             .project-info {
-                opacity: 0;
+                opacity: 0.3;
             }
         }
     }

@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    //TRANSITION ENTRE LES PROJETS
     const projectTransition = document.querySelector('.project-transition');
     
     previous.addEventListener('click', () => {
@@ -156,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             displayProject(projects[previousIndex]);
             projectTransition.classList.remove('transition');
-            }, 600);
+            }, 500);
     });
     
     
@@ -168,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
         displayProject(projects[nextIndex]);
         projectTransition.classList.remove('transition');
-        }, 600);
+        }, 500);
     });
 });
 
