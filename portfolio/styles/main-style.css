@@ -167,7 +167,7 @@ header .logo-menu .main-menu-place .primary-navigation {
   width: 45%;
   max-width: 740px;
   top: 6vh;
-  padding: 1vh 0;
+  padding: 1vh 1vw;
   border: 0px solid;
   border-radius: 35px;
   background: rgba(255, 255, 255, 0.5);
