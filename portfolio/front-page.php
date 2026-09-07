@@ -1,6 +1,5 @@
-<?php get_header(); ?>
-
-<?php
+<?php 
+    get_header();
     $modale_team = get_modale_datas();
 ?>
 
