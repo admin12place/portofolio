@@ -501,7 +501,7 @@ button.ff-btn:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0 0 4vh 0;
+  margin: 2vh 0 3vh 0;
   gap: 5vw;
 }
 .network-wrapper .social-link {
@@ -519,6 +519,9 @@ button.ff-btn:hover {
 }
 .network-wrapper .social-link:nth-child(4) {
   transition-delay: 1.5s;
+}
+.network-wrapper .social-link:nth-child(5) {
+  transition-delay: 1.8s;
 }
 .network-wrapper .social-link .icon-network {
   width: clamp(30px, 3vw, 52px);

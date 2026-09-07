@@ -546,7 +546,7 @@ button.ff-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0 0 4vh 0;
+    margin: 2vh 0 3vh 0;
     gap: 5vw;
     .social-link {
         opacity: 0;
@@ -562,6 +562,9 @@ button.ff-btn {
         }
         &:nth-child(4) {
             transition-delay: 1.5s;
+        }
+        &:nth-child(5) {
+            transition-delay: 1.8s;
         }
         .icon-network {
             width: clamp(30px, 3vw, 52px);

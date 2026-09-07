@@ -1,11 +1,15 @@
 <?php get_header(); ?>
 
+<?php
+    $modale_team = get_modale_datas();
+?>
+
 <section class="modale-team">
     <div class="modale-team-image">
-        <img class="" src="<?php echo the_field('modal_team_img')?>"/>
+        <img class="" src="<?php echo $modale_team['imgurl'];?>" alt="<?php echo $modale_team['imgalt']; ?>" title="<?php echo $modale_team['imgtitle']; ?>"/>
     </div>
     <div class="modale-team-text">
-        <p><?php echo nl2br(esc_html(get_field('modal_team_text'))); ?></p>
+        <p><?php echo nl2br(esc_html($modale_team['modaltext'])); ?></p>
     </div>
 </section>
 
