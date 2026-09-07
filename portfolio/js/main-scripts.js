@@ -51,25 +51,6 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
-/*APPARITION DES ICONES DE RÉSEAUX SOCIAUX*/
-const networkWrapper = document.querySelector('.network-wrapper');
-
-if (networkWrapper) {
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                networkWrapper.classList.add('display_networks');
-                observer.unobserve(networkWrapper);
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    observer.observe(networkWrapper);
-}
-/*FIN D'APPARITION DES ICONES DE RÉSEAUX SOCIAUX*/
-
 /*GESTION DE LA MODALE-TEAM*/
 const modaleTeam = document.querySelector('.modale-team');
 const modaleTeamLink = document.querySelector('.modal-team-link');
@@ -173,8 +154,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/*Animation de la single project*/
+/*APPARITION DES ICONES DE RÉSEAUX SOCIAUX*/
+const networkWrapper = document.querySelector('.network-wrapper');
+const socialLinks = document.querySelectorAll('.social-link');
 
+if (networkWrapper) {
+
+    //Délai d'apparition de chaque réseau
+    socialLinks.forEach((link, index) => {
+        link.style.transitionDelay = `${0.6 + index * 0.3}s`;
+    });
+
+    //Animation au scroll -> viewport
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                networkWrapper.classList.add('display_networks');
+                observer.unobserve(networkWrapper);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    observer.observe(networkWrapper);
+}
+/* FIN D'APPARITION DES ICONES DE RÉSEAUX SOCIAUX */
 
 
 /*FIN DE GESTION DE LA SINGLE-PROJET*/
