@@ -19,8 +19,7 @@ if (menuBurger && menuContainer) {
 
     document.addEventListener('click', (e) => {
         if (
-            (!menuContainer.contains(e.target) && !menuBurger.contains(e.target)) ||
-            e.target.closest('a[href="#contact"]')
+            (!menuContainer.contains(e.target) && !menuBurger.contains(e.target))
         ) {
             menuContainer.classList.remove('active');
             menuBurger.classList.remove('undisplayed');
