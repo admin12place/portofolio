@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    function displayProject(project, direction) {
+    function displayProject(project) {
 
         article.querySelector('h1').textContent = project.title;
         const image = article.querySelector('.screen-image');
@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     });
 });
+/*FIN DE GESTION DE LA SINGLE-PROJET*/
 
 /*APPARITION DES ICONES DE RÉSEAUX SOCIAUX*/
 const networkWrapper = document.querySelector('.network-wrapper');
@@ -181,7 +182,7 @@ if (networkWrapper) {
 /* FIN D'APPARITION DES ICONES DE RÉSEAUX SOCIAUX */
 
 
-/*FIN DE GESTION DE LA SINGLE-PROJET*/
+
 
 /*COULEURS DES MANIFESTOS*/
 const colors = ['#0000FF', '#FF0000', '#00AA00'];
