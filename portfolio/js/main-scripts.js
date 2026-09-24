@@ -181,9 +181,6 @@ if (networkWrapper) {
 }
 /* FIN D'APPARITION DES ICONES DE RÉSEAUX SOCIAUX */
 
-
-
-
 /*COULEURS DES MANIFESTOS*/
 const colors = ['#0000FF', '#FF0000', '#00AA00'];
 colors.sort(() => Math.random() - 0.5);

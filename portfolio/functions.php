@@ -154,7 +154,7 @@ function get_social_network() {
     return $social_network;
 }
 
-/*REMPLISSAGE SIMULTANÉ DU TITRE ACF ET DU TITRE H1 NATIF*/
+/*REMPLISSAGE SIMULTANÉ DU TITRE ACF ET DU TITRE H1 NATIF (RÉSEAUX SOCIAUX)*/
 add_action('admin_footer-post-new.php', function () {
 
     global $post_type;
@@ -168,6 +168,43 @@ add_action('admin_footer-post-new.php', function () {
     document.addEventListener('DOMContentLoaded', function () {
 
         const acfField = document.querySelector('#acf-field_6a9a6d149841b');
+
+        if (!acfField) {
+            return;
+        }
+
+        function updatePostTitle() {
+
+            const title = acfField.value.trim();
+
+            wp.data.dispatch('core/editor').editPost({
+                title: title
+            });
+        }
+
+        acfField.addEventListener('input', updatePostTitle);
+        acfField.addEventListener('change', updatePostTitle);
+
+    });
+    </script>
+
+    <?php
+});
+
+/*REMPLISSAGE SIMULTANÉ DU TITRE ACF ET DU TITRE H1 NATIF (PROJETS)*/
+add_action('admin_footer-post-new.php', function () {
+
+    global $post_type;
+
+    if ($post_type !== 'projet') {
+        return;
+    }
+    ?>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const acfField = document.querySelector('#acf-field_6a8c779a8e531');
 
         if (!acfField) {
             return;
